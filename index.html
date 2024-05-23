@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Triagem Médica</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <br>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Triagem Médica</h1>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome:</label>
+                <input type="text" class="form-control" id="name" placeholder="Insira seu nome">
+            </div>
+
+            <div class="mb-3">
+                <label for="age" class="form-label">Idade:</label>
+                <input type="number" class="form-control" id="age" placeholder="Insira sua idade">
+            </div>
+
+            <div class="mb-3">
+                <label for="contact" class="form-label">Contato:</label>
+                <input type="text" class="form-control" id="contact" placeholder="Insira seu contato">
+            </div>
+
+            </label>Informe seu gênero</label>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Como você se identifica?. . .">
+            <datalist id="datalistOptions">
+                <option value="Cisgênero">
+                <option value="Transgênero">
+                <option value="Não Binario">
+            </datalist>
+
+            <div class="mb-3">
+                <label for="age" class="form-label">Peso:</label>
+                <input type="number" class="form-control" id="age" placeholder="Insira seu peso">
+            </div>
+
+            <div class="mb-3">
+                <label for="age" class="form-label">Temperatura</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Informe sua temperatura</option>
+                    <option value="1">Hiportemia 35° ou menos</option>
+                    <option value="2">Normal 36° - 37.5°</option>
+                    <option value="3">Febre 37.6° - 39.5°</option>
+                    <option value="4">Febre alta 39.6° - 41°</option>
+                    <option value="5">Hipertemia 41° ou mais</option>
+                </select>
+            </div>
+            <br>
+
+            <div class="mb-3">
+                <label for="symptoms" class="form-label">Sintomas:</label>
+                <textarea class="form-control" id="symptoms" rows="3" placeholder="Descreva seus sintomas"></textarea>
+            </div>
+
+
+
+
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                    checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    Pouca urgência: Caso para atendimento preferncial nas unidades de atenção básica - Verde
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                    Urgente: Caso de gravidade moderada, necessidade de atendimento médico, sem risco imediato - Amarelo
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                <label class="form-check-label" for="exampleRadios3">
+                    Emergência: Caso gravíssimo, com atendimento imediato e risco de morte - Vermelho
+                </label>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+    <br>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
