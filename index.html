@@ -60,20 +60,21 @@
 
     <div class="container mt-5">
         <h1 class="mb-4">Triagem Médica</h1>
+        <h2>Dados Pessoais:</h2>
         <form>
             <div class="mb-3">
                 <label for="name" class="form-label">Nome:</label>
-                <input type="text" class="form-control" id="name" placeholder="Insira seu nome">
+                <input type="text" class="form-control" id="name" placeholder="Informe seu nome completo">
             </div>
 
             <div class="mb-3">
                 <label for="age" class="form-label">Idade:</label>
-                <input type="number" class="form-control" id="age" placeholder="Insira sua idade">
+                <input type="number" class="form-control" id="age" placeholder="Informe sua idade">
             </div>
 
             <div class="mb-3">
                 <label for="contact" class="form-label">Contato:</label>
-                <input type="text" class="form-control" id="contact" placeholder="Insira seu contato">
+                <input type="text" class="form-control" id="contact" placeholder="Informe seu numero de contato">
             </div>
 
             </label>Informe seu gênero</label>
@@ -83,10 +84,12 @@
                 <option value="Transgênero">
                 <option value="Não Binario">
             </datalist>
+            <br>
 
+        <h2>Coleta Médica:</h2>
             <div class="mb-3">
                 <label for="age" class="form-label">Peso:</label>
-                <input type="number" class="form-control" id="age" placeholder="Insira seu peso">
+                <input type="number" class="form-control" id="age" placeholder="Informe seu peso">
             </div>
 
             <div class="mb-3">
@@ -100,36 +103,104 @@
                     <option value="5">Hipertemia 41° ou mais</option>
                 </select>
             </div>
-            <br>
 
             <div class="mb-3">
-                <label for="symptoms" class="form-label">Sintomas:</label>
-                <textarea class="form-control" id="symptoms" rows="3" placeholder="Descreva seus sintomas"></textarea>
+                <label for="name" class="form-label">Você fez alguma cirurgia?</label>
+                <input type="text" class="form-control" id="name" placeholder="Se sim, Qaul?...">
             </div>
 
-
-
-
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
-                    checked>
-                <label class="form-check-label" for="exampleRadios1">
-                    Pouca urgência: Caso para atendimento preferncial nas unidades de atenção básica - Verde
-                </label>
+            <div class="mb-3">
+                <label for="name" class="form-label">Você já teve alguma doença na infância?</label>
+                <input type="text" class="form-control" id="name" placeholder="Se sim, Qaul?...">
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                <label class="form-check-label" for="exampleRadios2">
-                    Urgente: Caso de gravidade moderada, necessidade de atendimento médico, sem risco imediato - Amarelo
-                </label>
+            
+            <div class="mb-3">
+                <label for="name" class="form-label">Possui alguma comorbidade?</label>
+                <input type="text" class="form-control" id="name" placeholder="Se sim, Qaul?...">
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                <label class="form-check-label" for="exampleRadios3">
-                    Emergência: Caso gravíssimo, com atendimento imediato e risco de morte - Vermelho
-                </label>
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Faz uso de medicamentos?</label>
+                <input type="text" class="form-control" id="name" placeholder="Se sim, Qaul?...">
             </div>
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Já teve alguma fratura?</label>
+                <input type="text" class="form-control" id="name" placeholder="Se sim, onde?...">
+            </div>
+
+            <div class="mb-3">
+                <label for="symptoms" class="form-label">Oque está sentindo?</label>
+                <textarea class="form-control" id="symptoms" rows="3" placeholder="Descreva seus sintomas..."></textarea>
+            </div>
+            
+
+
+
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Classificação Hospitalar</title>
+                <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+                <style>
+                    .radio-blue .custom-control-label::before,
+                    .radio-blue .custom-control-label::after {
+                        background-color: blue;
+                    }
+                    .radio-green .custom-control-label::before,
+                    .radio-green .custom-control-label::after {
+                        background-color: green;
+                    }
+                    .radio-yellow .custom-control-label::before,
+                    .radio-yellow .custom-control-label::after {
+                        background-color: yellow;
+                    }
+                    .radio-orange .custom-control-label::before,
+                    .radio-orange .custom-control-label::after {
+                        background-color: orange;
+                    }
+                    .radio-red .custom-control-label::before,
+                    .radio-red .custom-control-label::after {
+                        background-color: red;
+                    }
+                </style>
+            </head>
+            <body>
+            <div class="container mt-5">
+                <h2>Classificação Hospitalar</h2>
+                <br>
+                <h3>Informe com consciência seu grupo hospitalar</h3>
+                <div class="custom-control custom-radio radio-blue">
+                    <input type="radio" id="radioBlue" name="classification" class="custom-control-input">
+                    <label class="custom-control-label" for="radioBlue">Não Urgente</label>
+                </div>
+                <div class="custom-control custom-radio radio-green">
+                    <input type="radio" id="radioGreen" name="classification" class="custom-control-input">
+                    <label class="custom-control-label" for="radioGreen">Pouco Urgente</label>
+                </div>
+                <div class="custom-control custom-radio radio-yellow">
+                    <input type="radio" id="radioYellow" name="classification" class="custom-control-input">
+                    <label class="custom-control-label" for="radioYellow">Urgente</label>
+                </div>
+                <div class="custom-control custom-radio radio-orange">
+                    <input type="radio" id="radioOrange" name="classification" class="custom-control-input">
+                    <label class="custom-control-label" for="radioOrange">Muito Urgente</label>
+                </div>
+                <div class="custom-control custom-radio radio-red">
+                    <input type="radio" id="radioRed" name="classification" class="custom-control-input">
+                    <label class="custom-control-label" for="radioRed">Emergência</label>
+                </div>
+            </div>
+            
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            </body>
+            </html>
+            
             <br>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
